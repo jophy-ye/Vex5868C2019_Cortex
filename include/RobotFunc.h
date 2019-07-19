@@ -3,6 +3,7 @@
 
 
 #include "typedefs.h"
+#include "API.h"
 
 /**
  * -------------------------------------------------------------------
@@ -19,5 +20,11 @@
 inline int R_Motor_Get(R_Motor_t* Motor);
 inline void R_Motor_Set(R_Motor_t* Motor, int speed_input);
 inline void R_Motor_Stop(R_Motor_t* Motor);
+
+
+/**
+ * Get the Encoder value from PROS API, then calibrate it for better accurancy
+ */
+int R_Encoder_Get(Encoder enc_input);
 
 #endif

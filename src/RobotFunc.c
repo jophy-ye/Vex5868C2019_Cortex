@@ -2,7 +2,7 @@
 
 #include "RobotFunc.h"
 #include "typedefs.h"
-
+#include "RobotFacilities.h"
 
 
 /**
@@ -42,4 +42,18 @@ inline void R_Motor_Stop(R_Motor_t* Motor)
         return;
     
     motorStop(Motor->port);
+}
+
+
+int R_Encoder_Get(Encoder enc_input)
+{
+    return encoderGet(enc_input);
+
+    // TODO: Add a algorithm to modify the value
+    /**
+     * if (enc_input == LeftEncoder)    // since the Encoder type is (void*), we can safely do the comparison
+     *     XXX
+     * else
+     *     XXX
+     */
 }

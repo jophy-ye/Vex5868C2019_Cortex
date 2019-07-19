@@ -1,3 +1,6 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
 /**
  * -----------------------------------------------------------------
  * 
@@ -17,6 +20,12 @@
 #define LEFT_BACK_MOTOR_PIN                 0
 #define RIGHT_BACK_MOTOR_PIN                0
 
+#define LEFT_ENCODER_TOP_PIN                0   // note: do not use 10!!!
+#define LEFT_ENCODER_BOTTOM_PIN             0   // note: do not use 10!!!
+#define RIGHT_ENCODER_TOP_PIN               0   // note: do not use 10!!!
+#define RIGHT_ENCODER_BOTTOM_PIN            0   // note: do not use 10!!!
+#define LEFT_ENCODER_REVERSED               false
+#define RIGHT_ENCODER_REVERSED              false
 
 
 // all dimensions of robot
@@ -56,3 +65,5 @@
 #define JOY_HORIZONTAL_SLIDE_THRESOLD       0.4
 // the motor value would be joystick_input * CONTROL_P_VAL
 #define JOY_CONTROL_P_VAL                   0.95
+
+#endif
