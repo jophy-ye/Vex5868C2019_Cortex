@@ -11,6 +11,7 @@
 
 #include "RobotFacilities.h"
 #include "typedefs.h"
+#include "lcd.h"
 
 
 AutonPos_t AutonPos;
@@ -25,9 +26,7 @@ AutonPos_t AutonPos;
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
  */
 void initializeIO()
-{
-    
-}
+{   }
 
 /*
  * Runs user initialization code. This function will be started in its own task with the default
@@ -46,4 +45,7 @@ void initialize()
 {
     // initialize robot facilities
     InitRobotFacilities();
+
+    // generate a Task for LCD
+    TaskHandle LCD_Task = taskCreate(LCDTask_Handler, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_LOWEST + 1);
 }

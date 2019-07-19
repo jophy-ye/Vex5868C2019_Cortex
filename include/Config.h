@@ -10,6 +10,8 @@
  * -----------------------------------------------------------------
  */
 
+#include "API.h"
+
 #include <stdbool.h>
 
 
@@ -24,8 +26,9 @@
 #define LEFT_ENCODER_BOTTOM_PIN             0   // note: do not use 10!!!
 #define RIGHT_ENCODER_TOP_PIN               0   // note: do not use 10!!!
 #define RIGHT_ENCODER_BOTTOM_PIN            0   // note: do not use 10!!!
-#define LEFT_ENCODER_REVERSED               false
-#define RIGHT_ENCODER_REVERSED              false
+
+#define LCD_PIN                             uart1
+
 
 
 // all dimensions of robot
@@ -50,12 +53,14 @@
 
 
 
-// all info about basis motors (except ports)
+// all info about basis motors and encoders(except ports)
 // all not set +++++++++++++++++++++++
 #define LEFT_FRONT_MOTOR_REVERSED           false
 #define RIGHT_FRONT_MOTOR_REVERSED          false
 #define LEFT_BACK_MOTOR_REVERSED            false
 #define RIGHT_BACK_MOTOR_REVERSED           false
+#define LEFT_ENCODER_REVERSED               false
+#define RIGHT_ENCODER_REVERSED              false
 
 
 
