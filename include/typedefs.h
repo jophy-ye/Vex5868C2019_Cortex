@@ -28,4 +28,16 @@ typedef struct
     bool reversed;
 } R_Motor_t;
 
+
+/**
+ * The starting position of autonomous
+ * 
+ * skills is also here. When we do skills, chose skills so 
+ * the robot will call the specific autonomous action for skills
+ */
+typedef enum
+{
+    RedFront, RedBack, BlueFront, BlueBack, Skills
+} AutonPos_t;
+
 #endif

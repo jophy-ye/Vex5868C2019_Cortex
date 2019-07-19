@@ -9,6 +9,36 @@
 
 #include "main.h"
 
+#include "RobotAuto.h"
+extern AutonPos_t AutonPos;
+
+
+void RedFront_Action()
+{
+
+}
+
+void RedBack_Action()
+{
+
+}
+
+void BlueFront_Action()
+{
+
+}
+
+void BlueBack_Action()
+{
+
+}
+
+void Skills_Action()
+{
+
+}
+
+
 /*
  * Runs the user autonomous code. This function will be started in its own task with the default
  * priority and stack size whenever the robot is enabled via the Field Management System or the
@@ -25,5 +55,14 @@
  */
 void autonomous()
 {
-    
+    R_Stop();
+
+    switch(AutonPos)
+    {
+        case RedFront: RedFront_Action(); break;
+        case RedBack: RedBack_Action(); break;
+        case BlueFront: BlueFront_Action(); break;
+        case BlueBack: BlueBack_Action(); break;
+        case Skills: Skills_Action(); break;
+    }
 }
