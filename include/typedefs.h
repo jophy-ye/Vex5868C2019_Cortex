@@ -13,6 +13,12 @@
 
 
 /**
+ * include the "vector2d" struct
+ */
+#include "vector2d.h"
+
+
+/**
  * The 393 Motor type. It is actually containing 
  * the port of that motor, and if it is reversed.
  */
