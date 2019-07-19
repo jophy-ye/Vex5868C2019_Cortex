@@ -66,4 +66,9 @@
 // the motor value would be joystick_input * CONTROL_P_VAL
 #define JOY_CONTROL_P_VAL                   0.95
 
+
+
+// all math constants
+#define PI                                  3.1415926536
+
 #endif

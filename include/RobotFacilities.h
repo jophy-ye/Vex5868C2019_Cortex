@@ -10,13 +10,16 @@ extern const R_Motor_t RightFrontMotor;
 extern const R_Motor_t LeftBackMotor;
 extern const R_Motor_t RightBackMotor;
 
-extern const Encoder LeftEncoder;
-extern const Encoder RightEncoder; 
+extern Encoder LeftEncoder;
+extern Encoder RightEncoder; 
 
 // containing the joystick slot for master
 extern const unsigned char joystick;
 
 // sensors, other motors can folllow on like this...
 // remember to add them in .c file ++++++++
+
+
+void InitRobotFacilities();
 
 #endif
