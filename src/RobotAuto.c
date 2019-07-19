@@ -78,7 +78,7 @@ void R_MoveDistance(double dist, double power, bool OptimizedStop)
                 || (fabs(dist) - fabs(R_RightMotorMovedCM)) <= OPTIMIZEDSTOP_PRESERVE_DIST)
             {
                 // configure the power because the robot is near the end and OptimizedStop is enabled
-                double ConfigureRate = ((double)(fabs(dist - fabs(R_LeftMotorMovedCM)))) / OPTIMIZEDSTOP_PRESERVE_DIST;
+                double ConfigureRate = ((double)(fabs(dist) - fabs(R_LeftMotorMovedCM))) / OPTIMIZEDSTOP_PRESERVE_DIST;
 
                 LeftPower *= ConfigureRate;
                 RightPower *= ConfigureRate;
@@ -165,7 +165,7 @@ void R_TurnDegree(double degree, double power, bool OptimizedStop)
                 || (fabs(turn_dist) - fabs(R_RightMotorMovedCM)) <= OPTIMIZEDSTOP_PRESERVE_DIST)
             {
                 // configure the power because the robot is near the end and OptimizedStop is enabled
-                double ConfigureRate = ((double)(fabs(turn_dist - fabs(R_LeftMotorMovedCM)))) / OPTIMIZEDSTOP_PRESERVE_DIST;
+                double ConfigureRate = ((double)(fabs(turn_dist) - fabs(R_LeftMotorMovedCM))) / OPTIMIZEDSTOP_PRESERVE_DIST;
 
                 LeftPower *= ConfigureRate;
                 RightPower *= ConfigureRate;

@@ -14,7 +14,7 @@
  */
 
 
-inline int R_Motor_Get(R_Motor_t Motor)
+int R_Motor_Get(R_Motor_t Motor)
 {
     if (Motor.reversed == true)
         return (-motorGet(Motor.port));
@@ -22,7 +22,7 @@ inline int R_Motor_Get(R_Motor_t Motor)
         return motorGet(Motor.port);
 }
 
-inline void R_Motor_Set(R_Motor_t Motor, int speed_input)
+void R_Motor_Set(R_Motor_t Motor, int speed_input)
 {
     if (Motor.reversed == true)
         motorSet(Motor.port, -speed_input);
@@ -30,7 +30,7 @@ inline void R_Motor_Set(R_Motor_t Motor, int speed_input)
         motorSet(Motor.port, speed_input);
 }
 
-inline void R_Motor_Stop(R_Motor_t Motor)
+void R_Motor_Stop(R_Motor_t Motor)
 { motorStop(Motor.port); }
 
 

@@ -9,9 +9,13 @@
 #include <stdbool.h>
 
 /**
+ * -------------------------------------------------------------------
+ * 
  * This file contains function for the user to let the robot
  * walk a certain distance, etc. Inplementing all functions
- * with the foundation of Robot.h
+ * with the foundation of RobotFunc.h and RobotFacilities.h
+ * 
+ * -------------------------------------------------------------------
  */
 
 

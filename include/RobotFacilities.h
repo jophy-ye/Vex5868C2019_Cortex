@@ -1,6 +1,14 @@
 #ifndef _ROBOT_FACILITIES_H_
 #define _ROBOT_FACILITIES_H_
 
+/**
+ * -----------------------------------------------------------------------------
+ *
+ * This file contains all robot facilities, like joystick, sensors, motors, etc.
+ * 
+ * -----------------------------------------------------------------------------
+ */
+
 #include "typedefs.h"
 #include "API.h"
 
