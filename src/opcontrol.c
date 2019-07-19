@@ -8,7 +8,9 @@
  */
 
 #include "main.h"
+#include "RobotAuto.h"
 #include "Config.h"
+#include "typedefs.h"
 
 /*
  * Runs the user operator control code. This function will be started in its own task with the
@@ -29,8 +31,33 @@
  */
 void operatorControl()
 {
+	vector2d LeftJoyVec, RightJoyVec;	// Vector to store left and right joystick number
+
+	// start the loop
 	while(true)
 	{
+		LeftJoyVec.x = joystickGetAnalog(joystick, 4);
+		LeftJoyVec.y = joystickGetAnalog(joystick, 3);
+		RightJoyVec.x = joystickGetAnalog(joystick, 1);
+		RightJoyVec.y = joystickGetAnalog(joystick, 2);
+
+		// robot movement
+		if (fabs(vector2d_get_gradient(&LeftJoyVec)) < JOY_HORIZONTAL_SLIDE_THRESOLD)
+		{
+			// horizontal sliding movement ( abs(left_joystick_gradient)) < thresold )
+			R_Slide(LeftJoyVec.x * JOY_CONTROL_P_VAL);
+		}
+		else
+		{
+			// basis basic movement (forward/backward)
+			R_Motor_Set(LeftFrontMotor, LeftJoyVec.y * JOY_CONTROL_P_VAL);
+			R_Motor_Set(LeftBackMotor, LeftJoyVec.y * JOY_CONTROL_P_VAL);
+			R_Motor_Set(RightFrontMotor, RightJoyVec.y * JOY_CONTROL_P_VAL);
+			R_Motor_Set(RightBackMotor, RightJoyVec.y * JOY_CONTROL_P_VAL);
+		}
+
 		
+
+		delay(20);
 	}
 }
