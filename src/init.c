@@ -43,6 +43,8 @@ void initializeIO()
  */
 void initialize()
 {
+    setTeamName("5868C");
+
     // initialize robot facilities
     InitRobotFacilities();
 
